@@ -40,7 +40,7 @@
   background-color: var(--fondo-gris);
   border-radius: 10px;
 }
-.right-nav :hover {
+.right-nav form div:hover {
   background-color: var(--white);
   color: var(--gray);
   border-radius: 10px;
@@ -59,7 +59,7 @@
   margin-right: 0 !important;
   font-size: 1em;
 }
-.right-nav :hover {
+.right-nav form div:hover {
   color: var(--gray);
   background-color: inherit;
   border: 1px solid transparent;
@@ -81,8 +81,8 @@
   margin-right: 0px !important;
 }
 
-.right-nav button:hover {
-  color: #696969;
+.right-nav form div:hover button{
+  color: #ABABAB;
   background-color: white;
   transition: 0.8s;
 }
@@ -142,7 +142,7 @@
   background-color: white;
   border: 1px solid whitesmoke;
   position: absolute;
-  top: 70px;
+  top: 65px;
   list-style: none;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -171,9 +171,10 @@
 }
 
 .inner-nav-text {
+  color: #AFAFAF;
   font-size: 0.8em;
   font-weight: 500;
-  color: var(--textgray);
+  /*color: var(--textgray);*/
 }
 
 .inspiracionListRight {
@@ -188,9 +189,37 @@
 }
 
 .inner-nav-arrow {
+  color: #fff;
+  opacity: 0;
   margin-left: 30px;
 }
+.inspiracionInner:hover .inner-nav-arrow{
+  margin-left: 40px;
+  margin-right: -10px;
+  opacity: 1;
+  color: #FF40A7;
+  transition: opacity 0.4s;
+  transition: margin-left 0.4s;
+  transition: margin-right 0.4s;
+  transition: color 0.4s;
 
+}
+.inspiracionInner:hover{
+  background-color: #FBE9FF;
+  border-radius: 7px;
+  transition: background-color 0.4s;
+}
+.inspiracionInner:hover .inner-nav-title{
+  color: #FF40A7;
+  font-weight: bold;
+  transition: color 0.4s;
+  transition: font-weight 0.4s;
+
+}
+.inspiracionInner:hover .inner-nav-text{
+  color: #3B3B3B;
+  transition: color 0.4s;
+}
 #findWorkList {
   display: none;
   flex-direction: column;

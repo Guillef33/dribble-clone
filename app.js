@@ -10,11 +10,15 @@ let findWorkLi = document.getElementById('findWorkLi');
 inspirationNav.addEventListener('mouseover', (e) => {
     inspirationList.style.display = 'flex';
 })
-
 inspirationNav.addEventListener('mouseout', (e) => {
     inspirationList.style.display = 'none';
 })
-
+inspirationList.addEventListener('mouseover', (e) => {
+    inspirationList.style.display = 'flex';
+})
+inspirationList.addEventListener('mouseout', (e) => {
+    inspirationList.style.display = 'none';
+})
 // inspirationNav.addEventListener('mouseout', () => {
 //     if (inspirationList.classList.addEventListener('mouseout', (e) => {
 //         inspirationList.style.display = 'none';
@@ -24,6 +28,9 @@ inspirationNav.addEventListener('mouseout', (e) => {
 //  })
 
 findWorkLi.addEventListener('mouseover', (e) => {
+    findWorkList.style.display = 'flex';
+})
+findWorkList.addEventListener('mouseover', (e) => {
     findWorkList.style.display = 'flex';
 })
 
@@ -47,10 +54,6 @@ profileLi.addEventListener('mouseout', () => {
     profileList.style.display = 'none';
 })
 
-
-inspirationNav.addEventListener('mousedown', () {
-    inspirationList.style.display = 'block';
-})
 
 
 // const lists =  Array.from(document.querySelectorAll('.classLi'));
