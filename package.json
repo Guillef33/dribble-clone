@@ -1,0 +1,14 @@
+{
+  "name": "dibble-clone",
+  "version": "1.0.0",
+  "description": "practice project",
+  "main": "app.js",
+  "scripts": {
+    "sass": "node-sass -w assets/scss/ -o assets/css/ --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

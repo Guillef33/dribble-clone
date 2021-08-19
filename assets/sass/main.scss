@@ -1,0 +1,24 @@
+:root {
+  $colorAzul: #1e90ff;
+  $colorBlanco: #ffffff;
+  $colorPink: #ea4c89;
+  $grisClaro: #e7e7e9;
+  $grisMuyClaro: #f3f3f4;
+  $colorSmoke: whitesmoke;
+  $darkGray: #696969;
+  $textGray: #6e6d7a;
+  $colorNegro: black;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;   
+}
+
+body    {
+    overflow-x: hidden;
+    background-color:$colorBlanco;
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+}
