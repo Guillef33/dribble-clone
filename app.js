@@ -7,69 +7,107 @@ let inspirationList = document.getElementById('inspirationList');
 let findWorkList = document.getElementById('findWorkList');
 let findWorkLi = document.getElementById('findWorkLi');
 
-inspirationNav.addEventListener('mouseover', (e) => {
-    inspirationList.style.display = 'flex';
+// inspirationNav.addEventListener('mouseover', (e) => {
+//     inspirationList.style.display = 'flex';
+// })
+// inspirationNav.addEventListener('mouseout', (e) => {
+//     inspirationList.style.display = 'none';
+// })
+// inspirationList.addEventListener('mouseover', (e) => {
+//     inspirationList.style.display = 'flex';
+// })
+
+// findWorkLi.addEventListener('mouseover', (e) => {
+//     findWorkList.style.display = 'flex';
+// })
+
+// findWorkLi.addEventListener('mouseout', () => {
+//     findWorkList.style.display = 'none';
+// })
+
+// findWorkList.addEventListener('mouseover', (e) => {
+//     findWorkList.style.display = 'flex';
+// })
+
+// findWorkList.addEventListener('mouseout', () => {
+//     findWorkList.style.display = 'none';
+// })
+
+// togglePreferencesLi.addEventListener('mouseover', (e) => {
+//     toggle.style.display = 'flex';
+// })
+
+// togglePreferencesLi.addEventListener('mouseout', () => {
+//     toggle.style.display = 'none';
+// })
+
+// toggle.addEventListener('mouseover', (e) => {
+//     toggle.style.display = 'flex';
+// })
+
+// toggle.addEventListener('mouseout', () => {
+//     toggle.style.display = 'none';
+// })
+
+// profileLi.addEventListener('mouseover', (e) => {
+//     profileList.style.display = 'block';
+// })
+
+// profileLi.addEventListener('mouseout', () => {
+//     profileList.style.display = 'none';
+// })
+
+
+// profileList.addEventListener('mouseover', (e) => {
+//     profileList.style.display = 'block';
+// })
+
+// profileList.addEventListener('mouseout', () => {
+//     profileList.style.display = 'none';
+// })
+
+
+
+const lists =  Array.from(document.querySelectorAll('.claseLi'));
+const hijosLists = Array.from(document.querySelectorAll('.hijosList'))
+
+const showHijos = e => {
+    const list = e.target;
+    const listProximo = list.nextElementSibling;
+
+    listProximo.style.display = 'flex';
+
+    console.log(listProximo.style.display);
+}
+
+const showElement = e => {
+  if (e.target.className === 'hijosList') {
+    e.target.style.display = 'flex';
+  }
+}
+
+const hideElement = e => {
+  if (e.target.className === 'hijosList') {
+    e.target.style.display = 'none';
+  }
+}
+
+const deleteHijos = e => {
+    const list = e.target;
+    const listProximo = list.nextElementSibling;
+
+    listProximo.style.display = 'none';
+}
+
+lists.forEach( (list, index) => { 
+    list.addEventListener('mouseover', showHijos);
+    list.addEventListener('mouseout', deleteHijos);
+});
+
+hijosLists.forEach(el => {
+  console.log(el)
+  el.addEventListener('mouseover', showElement);
 })
-inspirationNav.addEventListener('mouseout', (e) => {
-    inspirationList.style.display = 'none';
-})
-inspirationList.addEventListener('mouseover', (e) => {
-    inspirationList.style.display = 'flex';
-})
-inspirationList.addEventListener('mouseout', (e) => {
-    inspirationList.style.display = 'none';
-})
-// inspirationNav.addEventListener('mouseout', () => {
-//     if (inspirationList.classList.addEventListener('mouseout', (e) => {
-//         inspirationList.style.display = 'none';
-//     })) else {
-//         inspirationList.style.display = 'flex';
-//     }
-//  })
-
-findWorkLi.addEventListener('mouseover', (e) => {
-    findWorkList.style.display = 'flex';
-})
-findWorkList.addEventListener('mouseover', (e) => {
-    findWorkList.style.display = 'flex';
-})
-
-findWorkLi.addEventListener('mouseout', () => {
-    findWorkList.style.display = 'none';
-})
-
-togglePreferencesLi.addEventListener('mouseover', (e) => {
-    toggle.style.display = 'flex';
-})
-
-togglePreferencesLi.addEventListener('mouseout', () => {
-    toggle.style.display = 'none';
-})
-
-profileLi.addEventListener('mouseover', (e) => {
-    profileList.style.display = 'block';
-})
-
-profileLi.addEventListener('mouseout', () => {
-    profileList.style.display = 'none';
-})
-
-
-
-// const lists =  Array.from(document.querySelectorAll('.classLi'));
-
-
-// const showHijos = e => {
-//     const list = e.target; 
-//     const listProximo = list.nextElementSibling;
-
-//     list ? listProximo.style.diplay = 'flex' : 'none'; 
-
-// }
-
-// lists.forEach( list => { 
-//     list.addEventListener('mouseover', showHijos);
-//   });
 
 
 // let hijos = [profileList, toggle,inspirationList];
